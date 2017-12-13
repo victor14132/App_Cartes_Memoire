@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Flashcards</title>
+	<link rel="stylesheet" href="PrFl.css">
+	<script>
+	
+		var cartechoisie = 1;
+		
+		function ChangeImage(){
+		var cartecoteQ = document.getElementById("CarteQ");
+		var cartecoteR = document.getElementById("CarteR");
+		cartechoisie = Math.floor(Math.random() * 6) + 1;
+		cartecoteQ.src = "Images/" + "Q0" + cartechoisie + ".png";
+		cartecoteR.src = "Images/" + "R0" + cartechoisie + ".png";
+	
+	}
+
+	</script>
+</head>
+<body>
+	<!--<div class="boite" >
+		<img id="Carte" width="395" height="520" onclick="ChangeImage()" src="Images/Q01.png"/>
+	</div>-->
+	<div class="card-container">
+		<div class="card">
+			<div class="side"><img id="CarteQ" width="395" height="520" src="Images/Q01.png" onclick="ChangeImage()"></div>
+			<div class="side back"><img id="CarteR" width="395" height="520" src="Images/R01.png" onclick="ChangeImage()"></div>
+		</div>
+	</div>
+</body>
+</html>
