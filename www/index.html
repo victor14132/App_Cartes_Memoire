@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>Flashcards</title>
+	<link rel="stylesheet" href="PrFl.css">
+
+	<!--Materialize Requirments-->
+		<!--Import Google Icon Font-->
+    	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  	<!--Import materialize.css-->
+    	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+ <!--Phonegap Requirments-->
+ <meta name="format-detection" content="telephone=no" />
+ <meta name="msapplication-tap-highlight" content="no" />
+ <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+ <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<script>
+
+		var cartechoisie = 1;
+
+		function ChangeImage(){
+		var cartecoteQ = document.getElementById("CarteQ");
+		var cartecoteR = document.getElementById("CarteR");
+		cartechoisie = Math.floor(Math.random() * 6) + 1;
+		cartecoteQ.src = "img/" + "Q0" + cartechoisie + ".png";
+		cartecoteR.src = "img/" + "R0" + cartechoisie + ".png";
+	}
+
+	</script>
+</head>
+<body>
+	<!--<div class="boite" >
+		<img id="Carte" width="395" height="520" onclick="ChangeImage()" src="Images/Q01.png"/>
+	</div>-->
+	<div class="card-container">
+		<div class="card">
+			<div class="side"><img id="CarteQ" width="395" height="520" src="Images/Q01.png" onclick="ChangeImage()"></div>
+			<div class="side back"><img id="CarteR" width="395" height="520" src="Images/R01.png" onclick="ChangeImage()"></div>
+		</div>
+	</div>
+
+	<!--Materialize Requirments-->
+		<!--Import jQuery before materialize.js-->
+      	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+	<!--Phonegap Requirments-->
+		<script type="text/javascript" src="cordova.js"></script>
+		
+</body>
+</html>
